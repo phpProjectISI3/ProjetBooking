@@ -12,7 +12,7 @@ Projet de Booking sur mesure & réservation réalisé par l'équipe N2 dont les 
   Les technologie utilisés jusqu'à Maintenant sont :
   - Langage & Framework : **Laravel Php**.
   - Template static : **Luxe** .
-  - Tamplate engine : **Twig**.
+  - Template engine : **Twig**.
   - Orm : **Eloquent** (plus ou moins optionnel et décisionnel avec l'équipe).
   - Base de donnée & requétage: **Sql Server en Transact-Sql**.
   
