@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layouts/head.html')
+    <link rel="stylesheet" href="assets/css/plugins/dataTables.bootstrap4.min.css">
+    @@include('./layouts/head-bottom-link.html')
+</head>
+@@include('./layouts/main.html')
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Project Dashboard</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">Project</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- statustic with progressbar  start -->
+            <div class="col-xl-3 col-md-6">
+                <div class="card statustic-progress-card">
+                    <div class="card-body">
+                        <h5 class="mb-3">Awaiting payment</h5>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <label class="badge badge-light-success">35% <i class="m-l-10 feather icon-arrow-up"></i></label>
+                            </div>
+                            <div class="col text-right">
+                                <h5 class="">9 / 14</h5>
+                            </div>
+                        </div>
+                        <div class="progress m-t-5">
+                            <div class="progress-bar bg-c-green" style="width:35%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card statustic-progress-card">
+                    <div class="card-body">
+                        <h5 class="mb-3">Converted leads</h5>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <label class="badge badge-light-primary">28% <i class="m-l-10 feather icon-arrow-up"></i></label>
+                            </div>
+                            <div class="col text-right">
+                                <h5 class="">9 / 50</h5>
+                            </div>
+                        </div>
+                        <div class="progress m-t-5">
+                            <div class="progress-bar bg-c-blue" style="width:28%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card statustic-progress-card">
+                    <div class="card-body">
+                        <h5 class="mb-3">Projects in progress</h5>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <label class="badge badge-light-danger">87% <i class="m-l-10 feather icon-arrow-up"></i></label>
+                            </div>
+                            <div class="col text-right">
+                                <h5 class="">6 / 6</h5>
+                            </div>
+                        </div>
+                        <div class="progress m-t-5">
+                            <div class="progress-bar bg-c-red" style="width:87%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card statustic-progress-card">
+                    <div class="card-body">
+                        <h5 class="mb-3">Tasks not finished</h5>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <label class="badge badge-light-warning">32% <i class="m-l-10 feather icon-arrow-up"></i></label>
+                            </div>
+                            <div class="col text-right">
+                                <h5 class="">51 / 67</h5>
+                            </div>
+                        </div>
+                        <div class="progress m-t-5">
+                            <div class="progress-bar bg-c-yellow" style="width:32%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- statustic with progressbar  end -->
+
+            <!-- progressbar static data start -->
+            <div class="col-md-8">
+                <div class="card statustic-progress-card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 col-sm-6">
+                                <h5>Invoice overview</h5>
+                                <hr>
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="">0 Draft</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">0.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col">
+                                        <h6 class="">9 Not Sent</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">64.29%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 64.29%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col">
+                                        <h6 class="text-danger">6 Unpaid</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">42.86%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 42.86%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-warning">3 Partially Paid</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">21.43%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 21.43%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-warning">0 Overdue</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">0.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0.00;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-success">5 Paid</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">35.71%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 35.71%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-sm-6 mt-md-0 mt-3">
+                                <h5>Estimate overview</h5>
+                                <hr>
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="">3 Draft</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">27.27%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 27.27%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col">
+                                        <h6 class="">2 Not Sent</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">18.18%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 18.18%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col">
+                                        <h6 class="text-primary">5 Sent</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">45.45%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 45.45%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-warning">0 Expired</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">0.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 0.00%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-danger">3 Declined</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">27.27%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 27.27%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-success">0 Accepted</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">0.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 0.00%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-6 col-lg-4 mt-md-0 mt-3">
+                                <h5>Proposal overview</h5>
+                                <hr>
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h6 class="">1 Draft</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">25.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 25.00%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col">
+                                        <h6 class="">2 Not Sent</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">25.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 25.00%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col">
+                                        <h6 class="">1 Sent</h6>
+                                    </div>
+                                    <div class="col text-right">
+                                        <p class="mb-0">25.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 25.00%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-primary">0 Revised</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">0.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 0.00%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-danger">0 Declined</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">0.00%</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0.00%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mt-3">
+                                    <div class="col pr-0">
+                                        <h6 class="text-success">0 Accepted</h6>
+                                    </div>
+                                    <div class="col pl-0 text-right">
+                                        <p class="mb-0">25.00</p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="progress">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 25.00%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 text-center">
+                            <div class="col-lg-4 col-xs-12 col-md-12">
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <h3 class="alert-heading">$10,988.48</h3>
+                                    <span class="">Outstanding Invoices</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xs-12 col-md-12 mt-md-0 mt-3">
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <h3 class="alert-heading">$0.00</h3>
+                                    <span class="">Past Due Invoices</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xs-12 col-md-12 mt-md-0 mt-3">
+                                <div class="alert alert-success mb-0" role="alert">
+                                    <h3 class="alert-heading">$27,115.00</h3>
+                                    <span class="">Paid Invoices</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card table-card">
+                    <div class="card-body">
+                        <ul class="nav nav-tabs px-3 pt-3 mb-0" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active text-uppercase" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Tasks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Tickets</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="table-responsive">
+                                    <table class="table table-hover m-0">
+                                        <thead>
+                                            <tr>
+                                                <th>User</th>
+                                                <th>project</th>
+                                                <th>Completed</th>
+                                                <th>Status</th>
+                                                <th>Date</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-1.jpg" alt="activity-user"></td>
+                                                <td>
+                                                    <h6 class="mb-1">Social Media App</h6>
+                                                    <p class="m-0">Assigned to <span class="text-c-green">Tristan Madsen</span></p>
+                                                </td>
+                                                <td>326,134</td>
+                                                <td class="text-c-green">68%</td>
+                                                <td>October 26, 2017</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-2.jpg" alt="activity-user"></td>
+                                                <td>
+                                                    <h6 class="mb-1">Newspaper Wordpress Web</h6>
+                                                    <p class="m-0">Assigned to <span class="text-c-red">Marcus Poulsen</span></p>
+                                                </td>
+                                                <td>110,134</td>
+                                                <td class="text-c-red">46%</td>
+                                                <td>September 4, 2017</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-3.jpg" alt="activity-user"></td>
+                                                <td>
+                                                    <h6 class="mb-1">Dashboard UI Kit Design</h6>
+                                                    <p class="m-0">Assigned to <span class="text-c-blue">Felix Johansen</span></p>
+                                                </td>
+                                                <td>226,134</td>
+                                                <td class="text-c-blue">31%</td>
+                                                <td>November 14, 2017</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-1.jpg" alt="activity-user"></td>
+                                                <td>
+                                                    <h6 class="mb-1">Social Media App</h6>
+                                                    <p class="m-0">Assigned to <span class="text-c-green">Ida Jorgensen</span></p>
+                                                </td>
+                                                <td>500,134</td>
+                                                <td class="text-c-green">85%</td>
+                                                <td>December 14, 2017</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-3.jpg" alt="activity-user"></td>
+                                                <td>
+                                                    <h6 class="mb-1">Social Media App</h6>
+                                                    <p class="m-0">Assigned to <span class="text-c-red">Tristan Madsen</span></p>
+                                                </td>
+                                                <td>326,134</td>
+                                                <td class="text-c-red">68%</td>
+                                                <td>January 26, 2017</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" style="width:40px;" src="assets/images/user/avatar-4.jpg" alt="activity-user"></td>
+                                                <td>
+                                                    <h6 class="mb-1">Newspaper Wordpress Web</h6>
+                                                    <p class="m-0">Assigned to <span class="text-c-blue">Marcus Poulsen</span></p>
+                                                </td>
+                                                <td>110,134</td>
+                                                <td class="text-c-blue">46%</td>
+                                                <td>April 4, 2017</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Assigned</th>
+                                                <th>Name</th>
+                                                <th>Due Date</th>
+                                                <th class="text-right">Priority</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="chk-option">
+                                                        <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                            <input type="checkbox" class="custom-control-input">
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="assets/images/user/avatar-4.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6>John Deo</h6>
+                                                            <p class="text-muted m-b-0">Graphics Designer</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Able Pro</td>
+                                                <td>Jun, 26</td>
+                                                <td class="text-right"><label class="badge badge-light-danger">Low</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="chk-option">
+                                                        <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                            <input type="checkbox" class="custom-control-input">
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6>Jenifer Vintage</h6>
+                                                            <p class="text-muted m-b-0">Web Designer</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Mashable</td>
+                                                <td>March, 31</td>
+                                                <td class="text-right"><label class="badge badge-light-primary">high</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="chk-option">
+                                                        <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                            <input type="checkbox" class="custom-control-input">
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6>William Jem</h6>
+                                                            <p class="text-muted m-b-0">Developer</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Flatable</td>
+                                                <td>Aug, 02</td>
+                                                <td class="text-right"><label class="badge badge-light-success">medium</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="chk-option">
+                                                        <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                            <input type="checkbox" class="custom-control-input">
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6>David Jones</h6>
+                                                            <p class="text-muted m-b-0">Developer</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>Guruable</td>
+                                                <td>Sep, 22</td>
+                                                <td class="text-right"><label class="badge badge-light-primary">high</label></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-right m-r-20">
+                                        <a href="#!" class=" b-b-primary text-primary">View all Projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th>Due</th>
+                                                <th>User</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="chk-option">
+                                                        <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                            <input type="checkbox" class="custom-control-input">
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="d-inline-block align-middle text-center">
+                                                        <h6>16</h6>
+                                                        <p class="text-muted m-b-0">hours</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6 class="text-muted m-b-0 m-t-15">Jems Win</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <h6>[#1249] Vertically center carousel controls</h6>
+                                                        <p class="text-muted m-b-0">Try any carousel control and reduce the screen width below...</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="chk-option">
+                                                        <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                            <input type="checkbox" class="custom-control-input">
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="d-inline-block align-middle text-center">
+                                                        <h6>12</h6>
+                                                        <p class="text-muted m-b-0">hours</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="assets/images/user/avatar-4.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6 class="text-muted m-b-0 m-t-15">John Deo</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <h6>[#1183] Workaround for OS X selects printing bug</h6>
+                                                        <p class="text-muted m-b-0">Chrome fixed the bug several versions ago, thus rendering this...</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="chk-option">
+                                                        <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                            <input type="checkbox" class="custom-control-input">
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="d-inline-block align-middle text-center">
+                                                        <h6>16</h6>
+                                                        <p class="text-muted m-b-0">hours</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6 class="text-muted m-b-0 m-t-15">Jems Win</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <h6>[#1249] Vertically center carousel controls</h6>
+                                                        <p class="text-muted m-b-0">Try any carousel control and reduce the screen width below...</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="chk-option">
+                                                        <label class="check-task custom-control custom-checkbox d-flex justify-content-center done-task">
+                                                            <input type="checkbox" class="custom-control-input">
+                                                            <span class="custom-control-label"></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="d-inline-block align-middle text-center">
+                                                        <h6>40</h6>
+                                                        <p class="text-muted m-b-0">hours</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius wid-40 align-top m-r-15">
+                                                        <div class="d-inline-block">
+                                                            <h6 class="text-muted m-b-0 m-t-15">Jeny Wiliiam</h6>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-inline-block align-middle">
+                                                        <h6>[#1254] Inaccurate small pagination height</h6>
+                                                        <p class="text-muted m-b-0">The height of pagination elements is not consistent with...</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-right m-r-20">
+                                        <a href="#!" class=" b-b-primary text-primary">View all Projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card table-card review-card">
+                    <div class="card-header borderless">
+                        <h5>Customer Reviews</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="review-block">
+                            <div class="row">
+                                <div class="col-sm-auto p-r-0">
+                                    <img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+                                </div>
+                                <div class="col">
+                                    <h6 class="m-b-15">John Deo <span class="float-right f-13 text-muted"> a week ago</span></h6>
+                                    <a href="#!"><i class="feather icon-star-on f-18 text-c-yellow"></i></a>
+                                    <a href="#!"><i class="feather icon-star-on f-18 text-c-yellow"></i></a>
+                                    <a href="#!"><i class="feather icon-star-on f-18 text-c-yellow"></i></a>
+                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
+                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
+                                    <p class="m-t-15 m-b-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    <a href="#!" class="m-r-30 text-muted"><i class="feather icon-thumbs-up m-r-15"></i>Helpful?</a>
+                                    <a href="#!"><i class="feather icon-heart-on text-c-red m-r-15"></i></a>
+                                    <a href="#!"><i class="feather icon-edit text-muted"></i></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-auto p-r-0">
+                                    <img src="assets/images/user/avatar-4.jpg" alt="user image" class="img-radius profile-img cust-img m-b-15">
+                                </div>
+                                <div class="col">
+                                    <h6 class="m-b-15">Allina D’croze <span class="float-right f-13 text-muted"> a week ago</span></h6>
+                                    <a href="#!"><i class="feather icon-star-on f-18 text-c-yellow"></i></a>
+                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
+                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
+                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
+                                    <a href="#!"><i class="feather icon-star f-18 text-muted"></i></a>
+                                    <p class="m-t-15 m-b-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    <a href="#!" class="m-r-30 text-muted"><i class="feather icon-thumbs-up m-r-15"></i>Helpful?</a>
+                                    <a href="#!"><i class="feather icon-heart-on text-c-red m-r-15"></i></a>
+                                    <a href="#!"><i class="feather icon-edit text-muted"></i></a>
+                                    <blockquote class="blockquote m-t-15 m-b-0">
+                                        <h6>Allina D’croze</h6>
+                                        <p class="m-b-0 text-muted">Lorem Ipsum is simply dummy text of the industry.</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right  m-r-20">
+                            <a href="#!" class="b-b-primary text-primary">View all Customer Reviews</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>My To Do Items</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="new-task">
+                            <div class="to-do-list mb-0">
+                                <div class="d-inline-block">
+                                    <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-label">I'm sure _I_ shan't be able! I shall think.</span>
+                                    </label>
+                                </div>
+                                <div class="float-right"><a onclick="delete_todo(1);" href="#!" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+                            </div>
+                            <div class="to-do-list mb-0">
+                                <div class="d-inline-block">
+                                    <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-label">And when I was a.</span>
+                                    </label>
+                                </div>
+                                <div class="float-right"><a onclick="delete_todo(2);" href="#!" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+                            </div>
+                            <div class="to-do-list mb-0">
+                                <div class="d-inline-block">
+                                    <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-label">Test</span>
+                                    </label>
+                                </div>
+                                <div class="float-right"><a onclick="delete_todo(3);" href="#!" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+                            </div>
+                            <div class="to-do-list mb-0">
+                                <div class="d-inline-block">
+                                    <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-label">Lory hastily. 'I don't much care where</span>
+                                    </label>
+                                </div>
+                                <div class="float-right"><a onclick="delete_todo(4);" href="#!" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+                            </div>
+                            <div class="to-do-list mb-0">
+                                <div class="d-inline-block">
+                                    <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-label">Hatter: 'it's very interesting</span>
+                                    </label>
+                                </div>
+                                <div class="float-right"><a onclick="delete_todo(5);" href="#!" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+                            </div>
+                            <div class="to-do-list mb-0">
+                                <div class="d-inline-block">
+                                    <label class="check-task custom-control custom-checkbox d-flex justify-content-center">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-label">Alice, they all moved off, and</span>
+                                    </label>
+                                </div>
+                                <div class="float-right"><a onclick="delete_todo(6);" href="#!" class="delete_todolist"><i class="far fa-trash-alt"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Leads Overview</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="leadchart"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Statistics by Project Status</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="projstatechart"></div>
+                    </div>
+                </div>
+                <div class="card task-card">
+                    <div class="card-header">
+                        <h5>Tasks</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled task-list">
+                            <li>
+                                <i class="feather icon-check f-w-600 task-icon bg-c-green"></i>
+                                <p class="m-b-5">8:50</p>
+                                <h6 class="text-muted">Call to customer <span class="text-c-blue"> <a href="#!" class="text-c-blue">Jacob</a> </span> and discuss the</h6>
+                            </li>
+                            <li>
+                                <i class="task-icon bg-c-blue"></i>
+                                <p class="m-b-5">Sat, 5 Mar</p>
+                                <h6 class="text-muted">Design mobile Application</h6>
+                            </li>
+                            <li>
+                                <i class="task-icon bg-c-red"></i>
+                                <p class="m-b-5">Sun, 17 Feb</p>
+                                <h6 class="text-muted"><span class="text-c-blue"><a href="#!" class="text-c-blue">Jeny</a></span> assign you a task <span class="text-c-blue"><a href="#!" class="text-c-blue">Mockup Design.</a></span></h6>
+                            </li>
+                            <li>
+                                <i class="task-icon bg-c-yellow"></i>
+                                <p class="m-b-5">Sat, 18 Mar</p>
+                                <h6 class="text-muted mb-3">Design logo</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- progressbar static data end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+
+<!-- [ Main Content ] end -->
+@@include('./layouts/footer.html')
+<script src="assets/js/plugins/jquery.dataTables.min.js"></script>
+<script src="assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+<!-- Apex Chart -->
+<script src="assets/js/plugins/apexcharts.min.js"></script>
+<script src="assets/js/pages/todo.js"></script>
+
+<script>
+    // [ leadchart ] start
+    $(function() {
+        var options = {
+            chart: {
+                height: 275,
+                type: 'donut',
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            series: [85.7, 77.56, 20.9, 10.9, 15.8, 86.7],
+            colors: ["#4680ff", "#0e9e4a", "#00acc1", "#ffba57", "#536dfe", "#ff5252"],
+            labels: ["New", "Contacted", "Working", "Qualified", "Proposal Sent", "Customer"],
+            legend: {
+                show: true,
+                position: 'bottom',
+            }
+        }
+        var chart = new ApexCharts(
+            document.querySelector("#leadchart"),
+            options
+        );
+        chart.render();
+    });
+    // [ leadchart ] end
+    // [ projstatechart ] start
+    $(function() {
+        var options = {
+            chart: {
+                height: 275,
+                type: 'donut',
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            series: [85.7, 77.56, 20.9, 10.9, 15.8],
+            colors: ["#4680ff", "#00acc1", "#ffba57", "#536dfe", "#0e9e4a"],
+            labels: ["Not started", "In progress", "On hold", "Cancelled", "Finished"],
+            legend: {
+                show: true,
+                position: 'bottom',
+            }
+        }
+        var chart = new ApexCharts(
+            document.querySelector("#projstatechart"),
+            options
+        );
+        chart.render();
+    });
+    // [ projstatechart ] end
+</script>
+@@include('./layouts/footer-bottom-link.html')
+</body>
+
+</html>

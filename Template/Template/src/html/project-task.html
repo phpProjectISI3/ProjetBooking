@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./layouts/head.html')
+    <link rel="stylesheet" href="assets/css/plugins/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="assets/css/plugins/trumbowyg.min.css">
+    @@include('./layouts/head-bottom-link.html')
+</head>
+@@include('./layouts/main.html')
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Projects</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">Project</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+            <!-- liveline-section start -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Projects Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2 col-xs-6 border-right">
+                                <h3>14</h3>
+                                <h6 class="text-success">Not Started</h6>
+                                <span class="">Assigned to me: 7</span>
+                            </div>
+                            <div class="col-md-2 col-xs-6 border-right">
+                                <h3>17</h3>
+                                <h6 class="text-primary">In Progress</h6>
+                                <span class="">Assigned to me: 8</span>
+                            </div>
+                            <div class="col-md-2 col-xs-6 border-right">
+                                <h3>10</h3>
+                                <h6 class="">Testing</h6>
+                                <span class="">Assigned to me: 4</span>
+                            </div>
+                            <div class="col-md-2 col-xs-6 border-right">
+                                <h3>1</h3>
+                                <h6 class="text-success">Awaiting Feedback</h6>
+                                <span class="">Assigned to me: 3</span>
+                            </div>
+                            <div class="col-md-2 col-xs-6">
+                                <h3>6</h3>
+                                <h6 class="text-success">Complete</h6>
+                                <span class="">Assigned to me: 5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row align-items-center m-l-0">
+                            <div class="col-sm-6">
+                            </div>
+                            <div class="col-sm-6 text-right">
+                                <button class="btn btn-success btn-sm btn-round has-ripple" data-toggle="modal" data-target="#modal-report"><i class="feather icon-plus"></i> Add Project</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="report-table" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                    <th>Start Date</th>
+                                    <th>Due Date</th>
+                                    <th>Assigned to</th>
+                                    <th>Tags</th>
+                                    <th>Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="#!">Hatter. 'Does YOUR watch tell you.</a>
+                                        <p class="mb-2">#5 - THEIR eyes bright and eager with many a.</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-primary inline-block">In Progress</span>
+                                    </td>
+                                    <td>2019-07-29</td>
+                                    <td>2019-07-30</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-3.jpg" data-toggle="tooltip" data-title="Lorenzo Stroman" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Amani Wiegand" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap"></td>
+                                    <td><span class="badge badge-danger inline-block">Urgent</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="#!">test</a>
+                                        <p class="mb-2">Recurring Task</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-primary inline-block">In Progress</span>
+                                    </td>
+                                    <td>2019-07-30</td>
+                                    <td>2019-07-31</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-3.jpg" data-toggle="tooltip" data-title="Lorenzo Stroman" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Amani Wiegand" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-1.jpg" data-toggle="tooltip" data-title="Chet Rempel" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap">
+                                        <span class="badge badge-primary inline-block">bug</span>
+                                        <span class="badge badge-primary inline-block">follow up</span>
+                                        <span class="badge badge-primary inline-block">important</span>
+                                        <span class="badge badge-primary inline-block">logo</span>
+                                        <span class="badge badge-primary inline-block">review</span>
+                                    </td>
+                                    <td><span class="badge badge-primary inline-block">Medium</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="#!">Fix an open issue in our software</a>
+                                        <p class="mb-2">#1 - Build Website - Flatley-Wolff</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-danger inline-block">Not Started</span>
+                                    </td>
+                                    <td>2019-07-29</td>
+                                    <td>2019-08-12</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-1.jpg" data-toggle="tooltip" data-title="Chet Rempel" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Amani Wiegand" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-3.jpg" data-toggle="tooltip" data-title="Lorenzo Stroman" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap"></td>
+                                    <td><span class="badge badge-primary inline-block">Medium</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="#!">Add a Test Case for the GCI Website</a>
+                                        <p class="mb-2">#2 - SEO Optimization - Feeney-Pouros</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-primary inline-block">In Progress</span>
+                                    </td>
+                                    <td>2019-07-29</td>
+                                    <td>2019-08-12</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-1.jpg" data-toggle="tooltip" data-title="Chet Rempel" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Amani Wiegand" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-3.jpg" data-toggle="tooltip" data-title="Lorenzo Stroman" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap"></td>
+                                    <td><span class="badge badge-primary inline-block">Medium</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="#!">Research on improved audio latency</a>
+                                        <p class="mb-2">#3 - Brochure Design - Gorczany Kreiger</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-warning inline-block">Awaiting Feedback</span>
+                                    </td>
+                                    <td>2019-07-29</td>
+                                    <td>2019-08-12</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Amani Wiegand" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-3.jpg" data-toggle="tooltip" data-title="Lorenzo Stroman" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap"></td>
+                                    <td><span class="badge badge-danger inline-block">Urgent</span></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="#!">Fix an open issue in our software</a>
+                                        <p class="mb-2">#3 - Brochure Design - Gorczany Kreiger</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-warning inline-block">Awaiting Feedback</span>
+                                    </td>
+                                    <td>2019-07-29</td>
+                                    <td>2019-08-12</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-3.jpg" data-toggle="tooltip" data-title="Lorenzo Stroman" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Amani Wiegand" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap"></td>
+                                    <td><span class="badge badge-warning inline-block">High</span></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="#!">Fix mimetype declaration on Android</a>
+                                        <p class="mb-2">#4 - Website Redesign - Hilll Inc</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-warning inline-block">Awaiting Feedback</span>
+                                    </td>
+                                    <td>2019-07-29</td>
+                                    <td>2019-08-12</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Amani Wiegand" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap"></td>
+                                    <td><span class="badge badge-warning inline-block">High</span></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="#!">Fix mimetype declaration on Android</a>
+                                        <p class="mb-2">#1 - Build Website - Flatley-Wolff</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-success inline-block">Not Started</span>
+                                    </td>
+                                    <td>2019-07-29</td>
+                                    <td>2019-08-19</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-1.jpg" data-toggle="tooltip" data-title="Amani Wiegand" alt="Generic placeholder image">
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Marshall Morissette" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap"></td>
+                                    <td><span class="badge badge-danger inline-block">Urgent</span></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="#!">Find/fix 10 broken links in the RTEMS Wiki</a>
+                                        <p class="mb-2">#2 - SEO Optimization - Feeney-Pouros</p>
+                                        <small class="d-block">
+                                            <a href="#!">Start Timer</a> |
+                                            <a href="#!">Edit</a> |
+                                            <a href="#!" class="text-danger">Delete </a>
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <span class="badge badge-success inline-block">Testing</span>
+                                    </td>
+                                    <td>2019-07-29</td>
+                                    <td>2019-08-19</td>
+                                    <td>
+                                        <img class="img-radius wid-30" src="assets/images/user/avatar-4.jpg" data-toggle="tooltip" data-title="Lorenzo Stroman" alt="Generic placeholder image">
+                                    </td>
+                                    <td class="text-wrap"></td>
+                                    <td><span class="badge badge-danger inline-block">Urgent</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- liveline-section end -->
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
+<div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add new task</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Public</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                    <label class="custom-control-label" for="customCheck2">Billable</label>
+                </div>
+                <div class="form-group">
+                    <label class="floating-label" for="Subject"><small class="text-danger">* </small>Subject</label>
+                    <input type="text" class="form-control" id="Subject" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label class="floating-label" for="Rate">Hourly Rate</label>
+                    <input type="text" class="form-control" id="Rate" placeholder="">
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group fill">
+                            <label class="floating-label" for="Start">Start Date</label>
+                            <input type="date" class="form-control" id="Start" placeholder="123">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group fill">
+                            <label class="floating-label" for="Deadline">Due Date</label>
+                            <input type="date" class="form-control" id="Deadline" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="floating-label" for="Billing"><small class="text-danger">* </small>Billing Type</label>
+                            <select class="form-control" id="Billing">
+                                <option value=""></option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Urgent</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="floating-label" for="Status">Status</label>
+                            <select class="form-control" id="Status">
+                                <option value=""></option>
+                                <option value="1-week">Week</option>
+                                <option value="2-week">2 Weeks</option>
+                                <option value="1-month">1 Month</option>
+                                <option value="2-month">2 Months</option>
+                                <option value="3-month">3 Months</option>
+                                <option value="6-month">6 Months</option>
+                                <option value="1-year">1 Year</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="floating-label" for="Related">Related To</label>
+                    <select class="form-control" id="Related">
+                        <option value=""></option>
+                        <option value="project">Project</option>
+                        <option value="invoice">Invoice </option>
+                        <option value="customer">Customer </option>
+                        <option value="estimate">Estimate </option>
+                        <option value="contract">Contract </option>
+                        <option value="ticket">Ticket </option>
+                        <option value="expense">Expense </option>
+                        <option value="lead">Lead </option>
+                        <option value="proposal">Proposal </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label">Tags</label>
+                    <select multiple data-role="tagsinput">
+                        <option value="html">Html</option>
+                        <option value="css">Css</option>
+                        <option value="javascript">Javascript</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label">Description</label>
+                    <textarea id="Description-editor">
+                        <p>Description</p>
+                    </textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary"> Save </button>
+                <button class="btn btn-danger"> Clear </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- [ Main Content ] end -->
+@@include('./layouts/footer.html')
+<script src="assets/js/plugins/jquery.dataTables.min.js"></script>
+<script src="assets/js/plugins/dataTables.bootstrap4.min.js"></script>
+<!-- Apex Chart -->
+<script src="assets/js/plugins/apexcharts.min.js"></script>
+<script src="assets/js/pages/todo.js"></script>
+<script src="assets/js/plugins/bootstrap-tagsinput.min.js"></script>
+<script src="assets/js/plugins/trumbowyg.min.js"></script>
+
+<script>
+    // DataTable start
+    $('#report-table').DataTable();
+    // DataTable end
+    $('#Description-editor').trumbowyg({
+        svgPath: 'assets/css/plugins/icons.svg'
+    });
+</script>
+@@include('./layouts/footer-bottom-link.html')
+</body>
+
+</html>
