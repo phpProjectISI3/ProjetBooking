@@ -32,7 +32,7 @@
     "@ckeditor/ckeditor5-build-classic": "^12.1.0",
     "@claviska/jquery-minicolors": "^2.3.4",
     "animate.css": "^3.7.0",
-    "apexcharts": "^3.6.9",
+    "apexcharts": "^3.24.0",
     "bootstrap": "^4.3.1",
     "bootstrap-maxlength": "^1.6.0",
     "bootstrap-notify": "^3.1.3",
